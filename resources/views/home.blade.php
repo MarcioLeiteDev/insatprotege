@@ -18,7 +18,7 @@
         <div class="container-fluid" id="menu-superior">
           
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span> <b class="text-white">Rastreadores INSAT</b>
           </button>
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav ml-center mb-2 mb-lg-0">
@@ -166,5 +166,34 @@
             duration: 1200,
         });
     </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+    var navLinks = document.querySelectorAll('.nav-link');
+    var dropdownItems = document.querySelectorAll('.dropdown-item');
+
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function(event) {
+        var clickedLink = event.target;
+
+        // Verifica se o link clicado é um dropdown-toggle
+        var isDropdownToggle = clickedLink.classList.contains('dropdown-toggle');
+
+        if (!isDropdownToggle && window.innerWidth < 992) {
+          navbarCollapse.classList.remove('show');
+        }
+      });
+    });
+
+    dropdownItems.forEach(function(item) {
+      item.addEventListener('click', function() {
+        if (window.innerWidth < 992) {
+          navbarCollapse.classList.remove('show');
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
