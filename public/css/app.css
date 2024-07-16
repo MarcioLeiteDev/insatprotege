@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     scroll-behavior: smooth;
+    
 }
 section {
     height: 100%;
@@ -11,6 +13,10 @@ section {
     font-size: 1.2em;
     color: white;
     text-align: center;
+}
+
+p{
+    font-family: "Titillium Web", sans-serif;
 }
 .section1 { 
     background-image: url('../image/satelite.png');
@@ -37,9 +43,29 @@ section {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 120vh; /* Ajusta a altura conforme necessário */
-    justify-content: space-between;
+    height: 180vh; /* Ajusta a altura conforme necessário */
+    color:#000;
+}
+.section3 .Carros_content_box {
     display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+.section3 .Carros_box {
+    border: 2px solid #f30f0f;
+    border-radius: 1em;
+    box-shadow: 10px 10px 10px #ccc;
+    padding: 1em;
+    text-align: center;
+    background-color: #fff;
+}
+
+.section3 .whatsapp{
+    width: 80%;
+   background-color:  rgba(255, 255, 255, 0.5);
+   border-radius:2em;
+   margin: 0 auto;
+   padding: 2em;
 }
 .section4 { 
     background-image: url('../image/rastreador-moto.cd41f133d880396ed400.jpg');
@@ -50,10 +76,31 @@ section {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 120vh; /* Ajusta a altura conforme necessário */
-    justify-content: space-between;
-    display: flex;
+    height: 180vh; /* Ajusta a altura conforme necessário */
+    color: #000;
+
  }
+ .section4 .Carros_content_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+.section4 .Carros_box {
+    border: 2px solid #f30f0f;
+    border-radius: 1em;
+    box-shadow: 10px 10px 10px #ccc;
+    padding: 1em;
+    text-align: center;
+    background-color: #fff;
+}
+
+.section4 .whatsapp{
+    width: 80%;
+   background-color:  rgba(255, 255, 255, 0.5);
+   border-radius:2em;
+   margin: 0 auto;
+   padding: 2em;
+}
 .section5 { 
     background-image: url('../image/rastreador-frotas.698e332689797c7e400d.jpg');
     background-repeat: no-repeat; /* Garante que a imagem não seja repetida */
@@ -133,6 +180,37 @@ section {
 }
 
 /* ##Section 3 */
+.section3 .Carros_content_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+.section3 .Carrosbox {
+    border: 2px solid #c5c5c5;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    background-color:  rgba(255, 255, 255, 0.5);
+    
+}
+/* ##Section 4 */
+.section4 .Carros_content_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+    color:#000;
+}
+.section4 .Carrosbox {
+    border: 2px solid #c5c5c5;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    background-color:  rgba(255, 255, 255, 0.5);
+    color:#000000;
+    
+}
 
 .botao-office{
     border:3px solid #fff;
@@ -228,6 +306,31 @@ footer {
         opacity: 0.8;
         padding: 10px;
         border-radius:20px;
+    }
+
+    .section3 { 
+        background-image: url('../image/rastreador-veicular.59d823f4c0f43be3495c.jpg');
+        background-repeat: no-repeat; /* Garante que a imagem não seja repetida */
+        background-position: center center; /* Centraliza a imagem horizontal e verticalmente */
+        background-attachment: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 400vh; /* Ajusta a altura conforme necessário */
+        color:#000;
+    }
+    .section3 .Carros_content_box {
+        display: block;
+        margin: 1em;
+    }
+    .section3 .Carrosbox {
+        border: 2px solid #eeeeee;
+        border-radius: 1em;
+        box-shadow: 10px 10px 10px #ccc;
+        padding: 1em;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.5);
     }
 }
 

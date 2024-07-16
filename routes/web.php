@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::controller(WebController::class)->prefix('/')->as('./')->group(function(){
+    Route::get('/', 'index')->name('index');
 });
+
+// Route::get('/', function () {
+//     return view('home');
+// });
