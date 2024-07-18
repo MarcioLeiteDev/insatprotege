@@ -167,16 +167,127 @@
      </div>
     </section>
     <section class="section5" id="section5" data-aos="fade-up" data-aos-delay="400">
-        <h1>Section 5</h1>
+      <h1>Rastreadores para Utilitários</h1>
+      <p> Rastreamento via satélite para utilitários, localização do veículo via internet ou app, confira abaixo o que nosso rastreador é capaz</p>
+     <div class="Carros_content_box ">
+       <div class="Carrosbox" data-aos="fade-left">
+         <h1><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"></path></svg></h1>
+         <h4>LOCALIZAÇÃO DO VEÍCULO VIA INTERNET OU APP</h4>
+         <p>Você pode localizar seu veículo 24 horas por dia via internet ou celular.</p>
+       </div>
+       <div class="Carrosbox" data-aos="fade-up">
+         <h1><i class="fa-solid fa-globe"></i></h1>
+         <h4>CENTRAL DE MONITORAMENTO 24 HORAS</h4>
+       <p>Em caso de roubo ou localização de seu veículo, você conta com uma central de monitoramento 24 horas por dia, basta ligar em nosso 0800 ligação gratuita, informar a placa de seu veículo e nossa central vai prestar o atendimento necessário para a localização e recuperação do veículo juntamente com a polícia militar local.</p>
+       </div>
+       <div class="Carrosbox" data-aos="fade-down">
+         <h1><i class="fa-solid fa-database"></i></h1>
+         <h4>HISTÓRICO DE POSIÇÕES E VELOCIDADE</h4>
+       <p>A cada 2 minutos o equipamento GPS informa a posição de latitude e longitude para nosso software central, onde ficam armazenadas todas as posições para consultas até os últimos 360 dias, havendo necessidade de históricos mais longos, devesse verificar junto ao nosso setor administrativo a possibilidade de disponibilização dos dados.</p>
+       </div>
+       <div class="Carrosbox" data-aos="fade-right">
+         <h1><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M367.9 329.76c-4.62 5.3-9.78 10.1-15.9 13.65v22.94c66.52 9.34 112 28.05 112 49.65 0 30.93-93.12 56-208 56S48 446.93 48 416c0-21.6 45.48-40.3 112-49.65v-22.94c-6.12-3.55-11.28-8.35-15.9-13.65C58.87 345.34 0 378.05 0 416c0 53.02 114.62 96 256 96s256-42.98 256-96c0-37.95-58.87-70.66-144.1-86.24zM256 128c35.35 0 64-28.65 64-64S291.35 0 256 0s-64 28.65-64 64 28.65 64 64 64zm-64 192v96c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-96c17.67 0 32-14.33 32-32v-96c0-26.51-21.49-48-48-48h-11.8c-11.07 5.03-23.26 8-36.2 8s-25.13-2.97-36.2-8H208c-26.51 0-48 21.49-48 48v96c0 17.67 14.33 32 32 32z"></path></svg></h1>
+         <h4>CERCAS ELETRÔNICAS</h4>
+       <p>Você poderá delimitar uma área ou região onde seu veículo opera, ou até se deixar a mesma estacionada, havendo o deslocamento do veículo para outra área você será informado no app e no site de rastreamento imediatamente sobre o deslocamento do veículo.</p>
+       </div>
+     </div>
+     <div class="col-12 text-center whatsapp" data-aos="fade-right">
+       <h3>Duvidas e Orçamentos via Whatsapp</h3>
+      <a href="https://wa.me/{{ $telefone }}" target="_blank" style="text-decoration: none; color:#000;"><h1> <i class="fab fa-whatsapp-square bg-success"></i> Clique Aqui </h1></a> 
+     </div>
     </section>
     <section class="section6" id="section6" data-aos="fade-up" data-aos-delay="400">
-        <h1>Section 6</h1>
+      <h1>Rastreadores para Caminhão</h1>
+      <p> Rastreamento via satélite para caminhão, localização do veículo via internet ou app, confira abaixo o que nosso rastreador é capaz</p>
+     <div class="Carros_content_box ">
+       <div class="Carrosbox" data-aos="fade-left">
+         <h1><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"></path></svg></h1>
+         <h4>LOCALIZAÇÃO DO VEÍCULO VIA INTERNET OU APP</h4>
+         <p>Você pode localizar seu veículo 24 horas por dia via internet ou celular.</p>
+       </div>
+       <div class="Carrosbox" data-aos="fade-up">
+         <h1><i class="fa-solid fa-globe"></i></h1>
+         <h4>CENTRAL DE MONITORAMENTO 24 HORAS</h4>
+       <p>Em caso de roubo ou localização de seu veículo, você conta com uma central de monitoramento 24 horas por dia, basta ligar em nosso 0800 ligação gratuita, informar a placa de seu veículo e nossa central vai prestar o atendimento necessário para a localização e recuperação do veículo juntamente com a polícia militar local.</p>
+       </div>
+       <div class="Carrosbox" data-aos="fade-down">
+         <h1><i class="fa-solid fa-database"></i></h1>
+         <h4>HISTÓRICO DE POSIÇÕES E VELOCIDADE</h4>
+       <p>A cada 2 minutos o equipamento GPS informa a posição de latitude e longitude para nosso software central, onde ficam armazenadas todas as posições para consultas até os últimos 360 dias, havendo necessidade de históricos mais longos, devesse verificar junto ao nosso setor administrativo a possibilidade de disponibilização dos dados.</p>
+       </div>
+       <div class="Carrosbox" data-aos="fade-right">
+         <h1><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M367.9 329.76c-4.62 5.3-9.78 10.1-15.9 13.65v22.94c66.52 9.34 112 28.05 112 49.65 0 30.93-93.12 56-208 56S48 446.93 48 416c0-21.6 45.48-40.3 112-49.65v-22.94c-6.12-3.55-11.28-8.35-15.9-13.65C58.87 345.34 0 378.05 0 416c0 53.02 114.62 96 256 96s256-42.98 256-96c0-37.95-58.87-70.66-144.1-86.24zM256 128c35.35 0 64-28.65 64-64S291.35 0 256 0s-64 28.65-64 64 28.65 64 64 64zm-64 192v96c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-96c17.67 0 32-14.33 32-32v-96c0-26.51-21.49-48-48-48h-11.8c-11.07 5.03-23.26 8-36.2 8s-25.13-2.97-36.2-8H208c-26.51 0-48 21.49-48 48v96c0 17.67 14.33 32 32 32z"></path></svg></h1>
+         <h4>CERCAS ELETRÔNICAS</h4>
+       <p>Você poderá delimitar uma área ou região onde seu veículo opera, ou até se deixar a mesma estacionada, havendo o deslocamento do veículo para outra área você será informado no app e no site de rastreamento imediatamente sobre o deslocamento do veículo.</p>
+       </div>
+     </div>
+     <div class="col-12 text-center whatsapp" data-aos="fade-right">
+       <h3>Duvidas e Orçamentos via Whatsapp</h3>
+      <a href="https://wa.me/{{ $telefone }}" target="_blank" style="text-decoration: none; color:#000;"><h1> <i class="fab fa-whatsapp-square bg-success"></i> Clique Aqui </h1></a> 
+     </div>
     </section>
+
+
     <section class="section7" id="section7" data-aos="fade-up" data-aos-delay="400">
-        <h1>Section 7</h1>
+         <h1>Rastreadores para Frotas</h1>
+      <p> Rastreamento via satélite para frotas, localização do veículo via internet ou app, confira abaixo o que nosso rastreador é capaz</p>
+     <div class="Carros_content_box ">
+       <div class="Carrosbox" data-aos="fade-left">
+         <h1><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"></path></svg></h1>
+         <h4>LOCALIZAÇÃO DO VEÍCULO VIA INTERNET OU APP</h4>
+         <p>Você pode localizar seu veículo 24 horas por dia via internet ou celular.</p>
+       </div>
+       <div class="Carrosbox" data-aos="fade-up">
+         <h1><i class="fa-solid fa-globe"></i></h1>
+         <h4>CENTRAL DE MONITORAMENTO 24 HORAS</h4>
+       <p>Em caso de roubo ou localização de seu veículo, você conta com uma central de monitoramento 24 horas por dia, basta ligar em nosso 0800 ligação gratuita, informar a placa de seu veículo e nossa central vai prestar o atendimento necessário para a localização e recuperação do veículo juntamente com a polícia militar local.</p>
+       </div>
+       <div class="Carrosbox" data-aos="fade-down">
+         <h1><i class="fa-solid fa-database"></i></h1>
+         <h4>HISTÓRICO DE POSIÇÕES E VELOCIDADE</h4>
+       <p>A cada 2 minutos o equipamento GPS informa a posição de latitude e longitude para nosso software central, onde ficam armazenadas todas as posições para consultas até os últimos 360 dias, havendo necessidade de históricos mais longos, devesse verificar junto ao nosso setor administrativo a possibilidade de disponibilização dos dados.</p>
+       </div>
+       <div class="Carrosbox" data-aos="fade-right">
+         <h1><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M367.9 329.76c-4.62 5.3-9.78 10.1-15.9 13.65v22.94c66.52 9.34 112 28.05 112 49.65 0 30.93-93.12 56-208 56S48 446.93 48 416c0-21.6 45.48-40.3 112-49.65v-22.94c-6.12-3.55-11.28-8.35-15.9-13.65C58.87 345.34 0 378.05 0 416c0 53.02 114.62 96 256 96s256-42.98 256-96c0-37.95-58.87-70.66-144.1-86.24zM256 128c35.35 0 64-28.65 64-64S291.35 0 256 0s-64 28.65-64 64 28.65 64 64 64zm-64 192v96c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-96c17.67 0 32-14.33 32-32v-96c0-26.51-21.49-48-48-48h-11.8c-11.07 5.03-23.26 8-36.2 8s-25.13-2.97-36.2-8H208c-26.51 0-48 21.49-48 48v96c0 17.67 14.33 32 32 32z"></path></svg></h1>
+         <h4>CERCAS ELETRÔNICAS</h4>
+       <p>Você poderá delimitar uma área ou região onde seu veículo opera, ou até se deixar a mesma estacionada, havendo o deslocamento do veículo para outra área você será informado no app e no site de rastreamento imediatamente sobre o deslocamento do veículo.</p>
+       </div>
+     </div>
+     <div class="col-12 text-center whatsapp" data-aos="fade-right">
+       <h3>Duvidas e Orçamentos via Whatsapp</h3>
+      <a href="https://wa.me/{{ $telefone }}" target="_blank" style="text-decoration: none; color:#000;"><h1> <i class="fab fa-whatsapp-square bg-success"></i> Clique Aqui </h1></a> 
+     </div>
     </section>
+
     <section class="section8" id="section8" data-aos="fade-up" data-aos-delay="400">
-        <h1>Section 8</h1>
+       <div data-aos="fade-left"> <h1>SEJA UM FRANQUEADO A CUSTO ZERO!!!!!</h1>
+        <p>SEJA UM REPRESENTANTE INSAT E TENHA A MELHOR ESTRUTURA DE UMA EMPRESA COM QUASE 20 ANOS DE MERCADO.</p>
+        <p>APROVEITE SEU POTENCIAL DE VENDAS E SEJA UM SÓCIO* DE NOSSO NEGÓCIO, PODENDO TER SUA INDEPENDÊNCIA FINANCEIRA COM GANHOS MENSAIS SEM LIMITES!!!!</p>
+      </div>
+      <h2>OFERECEMOS TODA ESTRUTURA: </h2>
+      <p>ADMINISTRATIVA  GERAÇÃO DE CONTRATOS, LANÇAMENTOS E DISPONIBILIZAÇÃO DAS INFORMAÇÕES NO SISTEMA DO REPRESENTANTE.</p>
+      <p>FINANCEIRA  GERAÇÃO DE BOLETOS E RESPECTIVA COBRANÇA.</p>
+      <p>SISTEMA INDIVIDUALIZADO DE CONTROLE  TODO REPRESENTANTE TERÁ ACESSO COM LOGIN E SENHA SOBRE A COMPOSIÇÃO E SITUAÇÃO DE SUA CARTEIRA DE CLIENTES, BEM COMO, ACOMPANHAMENTO DE CLIENTES ATIVOS, PAGOS OU EM ATRASO.</p>
+      <p>MATERIAL DE DIVULGAÇÃO  DISPONILIZAÇÃO DE MATERIAL (DIGITAL) PARA DIVULGAÇÃO EM REDES SOCIAIS, AUXILIANDO A BUSCA DE NOVOS CLIENTES.</p>
+      <p>EQUIPAMENTOS  FORNECEREMOS OS EQUIPAMENTOS, SOFTWARE, ASSESSORIA DE RASTREAMENTO (COM VÍDEOS EXPLICATIVOS).</p>
+      <p>TÉCNICA  DISPONIBILZAÇÃO DE CONHECIMENTO TÉCNICO PARA INSTALAÇÕES DOS RASTREADORES, HABILITAÇÃO DE NOVOS INSTALADORES, APROVEITANDO A REDE DE CREDENCIADA E AUMENTANDO A MESMA.</p>
+      <p>CENTRAL 24HORAS  DISPONIBILIZAÇÃO DE CENTRAL 24HORAS COM ATENDIMENTO POR 0800 PARA SITUAÇÕES DE ROUBO OU FURTO, E AUXÍLIO NA RECUPERAÇÃO DO BEM.</p>
+     <h2>GANHOS MENSAIS</h2>
+      <p>COMO QUALQUER EMPRESÁRIO, NOSSO SÓCIO* TERÁ GANHOS MENSAIS.</p>
+      <p>APÓS O PAGAMENTO DA MENSALIDADE PELO CLIENTE, A COMISSÃO FICARÁ DISPONIBILIZADA PARA SOLICITAÇÃO DE SAQUE.</p>
+      <p>O VALOR DE COMISSIONAMENTO DEPENDERÁ DO PRAZO DE CONTRATO, VARIANDO DE 17% A 22% SOBRE O VALOR DO BOLETO.</p>
+      <p>NOSSOS CONTRATOS SÃO DE 1, 2 OU 3 ANOS, ISSO NOS RESERVA UMA GARANTIA DE RECEBIMENTO, E PELA NOSSA EXPERIÊNCIA, OS CLIENTES PERMANECEM POR PRAZOS BEM SUPERIORES AOS CONTRATADOS.</p>
+      <h2>SISTEMA DE RASTREAMENTO</h2>
+      <p>UTILIZAMOS O QUE O MERCADO TEM DE MELHOR, E ISSO NOS TEM GARANTIDO ALTÍSSIMO ÍNDICE DE RECUPERAÇÃO.</p>
+      <p>DISPONIBILIZAMOS UM VASTO LEQUE DE RELATÓRIOS PARA UM TOTAL CONTROLE SOBRE PEQUENAS OU GRANDES FROTAS</p>
+      <p>NOSSOS CLIENTES TEM O CONTROLE DE LOCALIZAÇÃO, ROTA, CONTROLE DE VELOCIDADE E DIVERSOS AVISOS SOBRE SEU VEÍCULO, NA PALMA DA MÃO, O APLICATIVO DE RASTREAMENTO PODE SER BAIXADO E ACESSADO EM VÁRIOS CELULARES AO MESMO TEMPO.</p>
+      <p>VÁRIOS VIDEOS SERÃO DISPONIBILIZADOS PARA AUXILIAR NA EXPERIÊNCIA PERFEITA DO CLIENTE, FAZENDO DESTA FORMA, QUE ESSE CLIENTE SEJA UM INDICADOR DE NOVOS CLIENTES AO NOSSO REPRESENTANTE.</p>
+      <h2>CENTRAL 24 HORAS</h2>
+      <p>TEMOS UMA EQUIPE ESPECIALIZADA EM ATENDIMENTO PARA ROUBO OU FURTO, AUXILIANDO NA RECUPERAÇÃO DOS VEÍCULOS DE NOSSOS CLIENTES.</p>
+      <h2>FOCO NA ÁREA COMERCIAL</h2>
+      <p>NOSSA PARCERIA BUSCA DEIXAR NOSSOS REPRESENTANTES SEM QUALQUER PREOCUPAÇÃO FORA DE SEU FOCO, ASSIM, VOCÊ PODE FAZER O QUE FAZ DE MELHOR, E COM POSSIBILIDADES DE GANHOS MENSAIS MUITO SATISFATÓRIOS.</p>
+      <p><small>*SER SÓCIO NOS GANHOS, COM COMISSIONAMENTOS BEM ACIMA DO MERCADO, ISSO NÃO RESPONSABILIZA O REPRESENTANTE EM QUESTÕES DE CONTRATO SOCIAL</small></p>
+    
     </section>
     <section class="section9" id="section9" data-aos="fade-up" data-aos-delay="400">
         <h1>Section 9</h1>

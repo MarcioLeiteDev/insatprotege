@@ -110,9 +110,31 @@ p{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 120vh; /* Ajusta a altura conforme necessário */
-    justify-content: space-between;
+    height: 200vh; /* Ajusta a altura conforme necessário */
+    /* justify-content: space-between;
+    display: flex; */
+    color:#000;
+}
+.section5 .Carros_content_box {
     display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+.section5 .Carros_box {
+    border: 2px solid #f30f0f;
+    border-radius: 1em;
+    box-shadow: 10px 10px 10px #ccc;
+    padding: 1em;
+    text-align: center;
+    background-color: #000000;
+}
+
+.section5 .whatsapp{
+    width: 80%;
+   background-color:  rgba(255, 255, 255, 0.5);
+   border-radius:2em;
+   margin: 0 auto;
+   padding: 2em;
 }
 .section6 {  
     background-image: url('../image/rastreador-caminhao.c4176ce16ef30bd8ae9c.jpg');
@@ -123,9 +145,32 @@ p{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 120vh; /* Ajusta a altura conforme necessário */
+    height: 180vh; 
+    color:#000;/* Ajusta a altura conforme necessário */
+    /* justify-content: space-between;
+    display: flex; } */
+}
+.section6 .Carros_content_box {
+    display: flex;
     justify-content: space-between;
-    display: flex; }
+    margin: 1em;
+}
+.section6 .Carros_box {
+    border: 2px solid #f30f0f;
+    border-radius: 1em;
+    box-shadow: 10px 10px 10px #ccc;
+    padding: 1em;
+    text-align: center;
+    background-color: #000000;
+}
+
+.section6 .whatsapp{
+    width: 80%;
+   background-color:  rgba(255, 255, 255, 0.5);
+   border-radius:2em;
+   margin: 0 auto;
+   padding: 2em;
+}
 .section7 { 
     background-image: url('../image/rastreador-frotas.698e332689797c7e400d.jpg');
     background-repeat: no-repeat; /* Garante que a imagem não seja repetida */
@@ -135,11 +180,32 @@ p{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 120vh; /* Ajusta a altura conforme necessário */
-    justify-content: space-between;
-    display: flex;
+    height: 180vh; /* Ajusta a altura conforme necessário */
+    /* justify-content: space-between;
+    display: flex; */
  }
-.section8 { background: #2ecc71; height: 120vh;}
+ .section7 .Carros_content_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+.section7 .Carros_box {
+    border: 2px solid #f30f0f;
+    border-radius: 1em;
+    box-shadow: 10px 10px 10px #ccc;
+    padding: 1em;
+    text-align: center;
+    background-color: #000000;
+}
+
+.section7 .whatsapp{
+    width: 80%;
+   background-color:  rgba(255, 255, 255, 0.5);
+   border-radius:2em;
+   margin: 0 auto;
+   padding: 2em;
+}
+.section8 { background: #13c0b2; height: auto; color:#000;}
 .section9 { background: #e74c3c; }
 .section10 { background: #e74c3c; }
 
@@ -202,6 +268,59 @@ p{
     color:#000;
 }
 .section4 .Carrosbox {
+    border: 2px solid #c5c5c5;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    background-color:  rgba(255, 255, 255, 0.5);
+    color:#000000;
+    
+}
+/* ##Section 4 */
+.section5 .Carros_content_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+    color:#000;
+}
+.section5 .Carrosbox {
+    border: 2px solid #c5c5c5;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    background-color:  rgba(255, 255, 255, 0.5);
+    color:#000000;
+    
+}
+/* ##Section 6 */
+.section6 .Carros_content_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+    color:#000;
+}
+.section6 .Carrosbox {
+    border: 2px solid #c5c5c5;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    background-color:  rgba(255, 255, 255, 0.5);
+    color:#000000;
+    
+}
+
+
+/* ##Section 7 */
+.section7 .Carros_content_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+    color:#000;
+}
+.section7 .Carrosbox {
     border: 2px solid #c5c5c5;
     border-radius: 1em;
     padding: 1em;
@@ -331,6 +450,165 @@ footer {
         padding: 1em;
         text-align: center;
         background-color: rgba(255, 255, 255, 0.5);
+    }
+
+     .section3 { 
+        background-image: url('../image/rastreador-veicular.59d823f4c0f43be3495c.jpg');
+        background-repeat: no-repeat; /* Garante que a imagem não seja repetida */
+        background-position: center center; /* Centraliza a imagem horizontal e verticalmente */
+        background-attachment: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 400vh; /* Ajusta a altura conforme necessário */
+        color:#000;
+    }
+    .section3 .Carros_content_box {
+        display: block;
+        margin: 1em;
+    }
+    .section3 .Carrosbox {
+        border: 2px solid #eeeeee;
+        border-radius: 1em;
+        box-shadow: 10px 10px 10px #ccc;
+        padding: 1em;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .section4 .Carros_content_box {
+        display: block;
+       
+        margin: 1em;
+        color:#000;
+    }
+    .section4 .Carrosbox {
+        border: 2px solid #c5c5c5;
+        border-radius: 1em;
+        padding: 1em;
+        margin: 1em;
+        text-align: center;
+        background-color:  rgba(255, 255, 255, 0.5);
+        color:#000000;
+        
+    }
+    .section4 { 
+        background-image: url('../image/rastreador-moto.cd41f133d880396ed400.jpg');
+        background-repeat: no-repeat; /* Garante que a imagem não seja repetida */
+        background-position: center center; /* Centraliza a imagem horizontal e verticalmente */
+        background-attachment: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 400vh; /* Ajusta a altura conforme necessário */
+        color: #000;
+    
+     }
+
+     .section5 { 
+        background-image: url('../image/rastreador-frotas.698e332689797c7e400d.jpg');
+        background-repeat: no-repeat; /* Garante que a imagem não seja repetida */
+        background-position: center center; /* Centraliza a imagem horizontal e verticalmente */
+        background-attachment: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 300vh; /* Ajusta a altura conforme necessário */
+        /* justify-content: space-between;
+        display: flex; */
+    }
+    .section5 .Carros_content_box {
+        display: block;
+
+        margin: 1em;
+    }
+    .section5 .Carros_box {
+        border: 2px solid #f30f0f;
+        border-radius: 1em;
+        box-shadow: 10px 10px 10px #ccc;
+        padding: 1em;
+        text-align: center;
+        background-color: #fff;
+    }
+    
+    .section5 .whatsapp{
+        width: 80%;
+       background-color:  rgba(255, 255, 255, 0.5);
+       border-radius:2em;
+       margin: 0 auto;
+       padding: 2em;
+    }
+    .section6 {  
+        background-image: url('../image/rastreador-caminhao.c4176ce16ef30bd8ae9c.jpg');
+        background-repeat: no-repeat; /* Garante que a imagem não seja repetida */
+        background-position: center center; /* Centraliza a imagem horizontal e verticalmente */
+        background-attachment: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 300vh; 
+        color:#000;/* Ajusta a altura conforme necessário */
+        /* justify-content: space-between;
+        display: flex; } */
+    }
+    .section6 .Carros_content_box {
+        display: block;
+        margin: 1em;
+    }
+    .section6 .Carros_box {
+        border: 2px solid #f30f0f;
+        border-radius: 1em;
+        box-shadow: 10px 10px 10px #ccc;
+        padding: 1em;
+        text-align: center;
+        background-color: #fff;
+    }
+    
+    .section6 .whatsapp{
+        width: 80%;
+       background-color:  rgba(255, 255, 255, 0.5);
+       border-radius:2em;
+       margin: 0 auto;
+       padding: 2em;
+    }
+
+    .section7 { 
+        background-image: url('../image/rastreador-frotas.698e332689797c7e400d.jpg');
+        background-repeat: no-repeat; /* Garante que a imagem não seja repetida */
+        background-position: center center; /* Centraliza a imagem horizontal e verticalmente */
+        background-attachment: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 300vh; /* Ajusta a altura conforme necessário */
+        /* justify-content: space-between;
+        display: flex; */
+     }
+    
+     .section7 .Carros_content_box {
+        display: block;
+        margin: 1em;
+    }
+    .section7 .Carros_box {
+        border: 2px solid #f30f0f;
+        border-radius: 1em;
+        box-shadow: 10px 10px 10px #ccc;
+        padding: 1em;
+        text-align: center;
+        background-color: #fff;
+    }
+    
+    .section7 .whatsapp{
+        width: 80%;
+       background-color:  rgba(255, 255, 255, 0.5);
+       border-radius:2em;
+       margin: 0 auto;
+       padding: 2em;
     }
 }
 
