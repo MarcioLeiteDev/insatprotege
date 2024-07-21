@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,9 @@ Route::controller(WebController::class)->prefix('/')->as('./')->group(function()
     Route::get('/', 'index')->name('index');
 });
 
+Route::controller(DashboardController::class)->prefix('/dashboard')->as('./dashboar')->group(function(){
+    Route::get('/' , 'index')->name('index');
+});
 // Route::get('/', function () {
 //     return view('home');
 // });
