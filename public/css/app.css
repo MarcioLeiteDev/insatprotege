@@ -205,9 +205,35 @@ p{
    margin: 0 auto;
    padding: 2em;
 }
-.section8 { background: #13c0b2; height: auto; color:#000;}
-.section9 { background: #e74c3c; }
-.section10 { background: #e74c3c; }
+.section8 { background: #86f0e7; height: auto; color:#000;}
+.section9 {
+    background-image: url('../image/contato.aaf18a87127ae4b89cbd.jpg');
+    background-repeat: no-repeat; /* Garante que a imagem não seja repetida */
+    background-position: center center; /* Centraliza a imagem horizontal e verticalmente */
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 180vh; 
+    color:#000;
+}
+.section9 .Carros_content_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+.section9 .Carros_box {
+    border: 2px solid #f30f0f;
+    border-radius: 1em;
+    box-shadow: 10px 10px 10px #ccc;
+    padding: 1em;
+    text-align: center;
+    background-color: #000000;
+    color:#000;
+}
+
+.section10 { background: #ffffff; color:#000;}
 
 
 /* ## Section 1 */
@@ -371,6 +397,29 @@ footer {
 .seta-para-cima:hover {
     color: #ccc;
 }
+
+
+.form-signin {
+    max-width: 330px;
+    padding: 1rem;
+  }
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
 
 /* Pequenos dispositivos (celulares) */
 @media (max-width: 906px) {
@@ -604,6 +653,43 @@ footer {
     }
     
     .section7 .whatsapp{
+        width: 80%;
+       background-color:  rgba(255, 255, 255, 0.5);
+       border-radius:2em;
+       margin: 0 auto;
+       padding: 2em;
+    }
+
+
+
+    .section9 { 
+        background-image: url('../image/contato.aaf18a87127ae4b89cbd.jpg');
+        background-repeat: no-repeat; /* Garante que a imagem não seja repetida */
+        background-position: center center; /* Centraliza a imagem horizontal e verticalmente */
+        background-attachment: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 300vh; /* Ajusta a altura conforme necessário */
+        /* justify-content: space-between;
+        display: flex; */
+     }
+    
+     .section9 .Carros_content_box {
+        display: block;
+        margin: 1em;
+    }
+    .section9 .Carros_box {
+        border: 2px solid #f30f0f;
+        border-radius: 1em;
+        box-shadow: 10px 10px 10px #ccc;
+        padding: 1em;
+        text-align: center;
+        background-color: #fff;
+    }
+    
+    .section9 .whatsapp{
         width: 80%;
        background-color:  rgba(255, 255, 255, 0.5);
        border-radius:2em;

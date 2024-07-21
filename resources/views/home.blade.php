@@ -290,10 +290,45 @@
     
     </section>
     <section class="section9" id="section9" data-aos="fade-up" data-aos-delay="400">
-        <h1>Section 9</h1>
+    </br></br></br></br>
+        <h1>Contato</h1>
+
+        <div class="Carros_content_box ">
+          <div class="Carrosbox" data-aos="fade-left">
+            <h2>Email</h2>
+            <p>{{ $email }}</p>
+          </div>
+          <div class="Carrosbox" data-aos="fade-left">
+            <h2>Telefone</h2>
+            <p>{{ $telefone }}</p>
+          </div>
+        </div>
     </section>
     <section class="section10" id="section10" data-aos="fade-up" data-aos-delay="400">
-        <h1>Section 10</h1>
+      <main class="form-signin w-100 m-auto">
+        <form>
+          <img class="mb-4" src="./image/logo.png" alt="" width="150" >
+          <h1 class="h3 mb-3 fw-normal">Escritório VIrtual</h1>
+      
+          <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+      
+          <div class="form-check text-start my-3">
+            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Remember me
+            </label>
+          </div>
+          <button class="btn btn-primary w-100 py-2" type="submit">Entrar</button>
+        
+        </form>
+      </main>
     </section>
 
       <!-- Rodapé com a seta -->
