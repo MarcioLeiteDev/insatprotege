@@ -28,7 +28,7 @@ class Pessoas extends Model
     }
 
     public function veiculos(){
-        return $this->hasMany(Veiculos::class , 'id_pessoa' , 'id')->with('veiculos');
+        return $this->hasMany(Veiculos::class , 'id_pessoa' , 'id');
     }
 
     public function user()

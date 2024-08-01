@@ -48,7 +48,7 @@ class PessoasController extends Controller
      */
     public function show(string $id)
     {
-        $pessoas = Pessoas::findOrFail($id);
+        $pessoas = Pessoas::find($id)->with('enderecos')->first();
 
         if (!$pessoas) {
             return response()->json(["response" => "Não foi possível encontrar esse usuário"], 404);

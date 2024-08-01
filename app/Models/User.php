@@ -45,7 +45,7 @@ class User extends Authenticatable
 
     public function pessoas()
     {
-        return $this->hasMany(Pessoas::class, 'user_id', 'id');
+        return $this->hasMany(Pessoas::class, 'user_id', 'id')->with('enderecos' , 'telefones' , 'veiculos');
     }
 
 }

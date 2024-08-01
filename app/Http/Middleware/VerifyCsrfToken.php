@@ -20,5 +20,17 @@ class VerifyCsrfToken extends Middleware
         '/escritorio/pessoas/store',
         '/escritorio/pessoas/update/*',
         '/escritorio/pessoas/delete/*',
+
+        '/escritorio/enderecos/store',
+        '/escritorio/enderecos/update/*',
+        '/escritorio/enderecos/delete/*',
+
+        '/escritorio/telefones/store',
+        '/escritorio/telefones/update/*',
+        '/escritorio/telefones/delete/*',
+
+        '/escritorio/veiculos/store',
+        '/escritorio/veiculos/update/*',
+        '/escritorio/veiculos/delete/*',
     ];
 }

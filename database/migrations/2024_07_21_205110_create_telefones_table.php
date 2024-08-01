@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('tipo')->comment('tipo 1 celular , tipo 2 fixo');
             $table->string('numero');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
