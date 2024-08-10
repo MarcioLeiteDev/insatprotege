@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pessoas;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        return response()->json(["response" => "Hello Word"] , 200 );
+        $usuarios = User::with('pessoas')->paginate(10);
+
+
+        return view('dashboard.users' , compact('usuarios'));
+        // return response()->json(["response" => "Hello Word"] , 200 );
     }
 
     /**
@@ -28,15 +33,32 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+
         $request["password"] = bcrypt($request['password']);
 
-        $users = User::create($request->all());
+        $create_usuario = [
+            "email" => $request['email'],
+            "password" =>  $request["password"],
+            "level" => $request['level']
+        ];
+       
+        $users = User::create($create_usuario);
+      
+        $create_pessoa = [
+            "nome" => $request['nome'],
+            "cpf" => $request['cpf'] ?? '',
+            "cnpj" => $request['cnpj'] ?? '',
+            "dt_nascimento" => $request['dt_nascimento'] ?? '',
+            "user_id" => $users->id,
+        ];
+
+        $pessoa = Pessoas::create($create_pessoa);
 
         if( ! $users ){
-            return response()->json(["response" => "Erro ao cadastrar usuario"] , 404 );
+            return redirect()->back()->with('danger', 'Erro cadastrar usuario');
         }
 
-        return response()->json(["response" => "Usuario Cadastrado com Sucesso"] , 201 );
+        return redirect()->back()->with('success', 'Usuário cadastrado com sucesso!');
     }
 
     /**

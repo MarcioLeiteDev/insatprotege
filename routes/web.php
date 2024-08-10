@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EnderecoController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PessoasController;
 use App\Http\Controllers\TelefoneController;
 use App\Http\Controllers\UserController;
@@ -24,10 +25,14 @@ Route::controller(WebController::class)->prefix('/')->as('./')->group(function()
     Route::get('/', 'index')->name('index');
 });
 
-Route::controller(DashboardController::class)->prefix('/escritorio')->as('/escritorio.')->group(function(){
+Route::controller(LoginController::class)->prefix('/log')->as('log.')->group(function(){
+    Route::post('/', 'store')->name('log');
+});
+
+Route::controller(DashboardController::class)->prefix('/escritorio')->as('escritorio.')->group(function(){
     Route::get('/' , 'index')->name('index');
 
-    Route::controller(UserController::class)->prefix('/users')->as('/users.')->group(function(){
+    Route::controller(UserController::class)->prefix('/users')->as('users.')->group(function(){
         Route::get('/' , 'index')->name('index');
         Route::post('/store' , 'store')->name('store');
         Route::get('/show/{id}' , 'show')->name('show');
@@ -35,7 +40,7 @@ Route::controller(DashboardController::class)->prefix('/escritorio')->as('/escri
         Route::delete('/delete/{id}' , 'destroy')->name('destroy');
     });
 
-    Route::controller(PessoasController::class)->prefix('/pessoas')->as('/pessoas.')->group(function(){
+    Route::controller(PessoasController::class)->prefix('/pessoas')->as('pessoas.')->group(function(){
         Route::get('/' , 'index')->name('index');
         Route::post('/store' , 'store')->name('store');
         Route::get('/show/{id}' , 'show')->name('show');
@@ -72,11 +77,7 @@ Route::controller(DashboardController::class)->prefix('/escritorio')->as('/escri
 //     return view('home');
 // });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');

@@ -306,16 +306,17 @@
     </section>
     <section class="section10" id="section10" data-aos="fade-up" data-aos-delay="400">
       <main class="form-signin w-100 m-auto">
-        <form>
+        <form method="post" action="{{ route('log.log') }}">
+          @csrf
           <img class="mb-4" src="./image/logo.png" alt="" width="150" >
-          <h1 class="h3 mb-3 fw-normal">Escritório VIrtual</h1>
+          <h1 class="h3 mb-3 fw-normal">Escritório Virtual</h1>
       
           <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Email address</label>
           </div>
           <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
             <label for="floatingPassword">Password</label>
           </div>
       

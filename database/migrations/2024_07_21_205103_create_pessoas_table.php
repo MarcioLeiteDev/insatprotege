@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users');
             $table->string('nome')->nullable();
             $table->string('cpf')->nullable();
+            $table->string('cnpj')->nullable();
             $table->string('rg')->nullable();
             $table->date('dt_nascimento')->nullable();
             $table->timestamps();

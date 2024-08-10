@@ -8,7 +8,7 @@
 
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-      <h1 class="h2">Dashboard</h1>
+      <h1 class="h2">::Dashboard {{ auth()->user()->level }}</h1>
       <div class="btn-toolbar mb-2 mb-md-0">
         <div class="btn-group me-2">
           <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
@@ -21,11 +21,44 @@
       </div>
     </div>
 
-    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
-    <h2>Section title</h2>
-    <div class="table-responsive small">
-<h2>Pa mano</h2>
+    <div class="box">
+      <div class="box-content">
+        <h1>Vendas</h1>
+        <table class="table">
+        </thead>
+        <tr>
+          <th>Data</th>
+          <th>Cliente</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+          <tbody>
+            <tr>
+              <td>Data</td>
+              <td>Cliente</td>
+              <td>Status</td>
+            </tr>
+
+        </table>
+      </div>
+      <div class="box-content">
+        <h1>Serviços</h1>
+      </div>
+     
+    </div>
+
+    <div class="box">
+      <div class="box-content">
+        <h1>Cobranças à Receber</h1>
+      </div>
+      <div class="box-content">
+        <h1>Cobranças Vencidas</h1>
+      </div>
+      <div class="box-content">
+        <h1>Comissões</h1>
+      </div>
+     
     </div>
   </main>
 
