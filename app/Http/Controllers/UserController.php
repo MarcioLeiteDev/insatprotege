@@ -14,8 +14,6 @@ class UserController extends Controller
     public function index()
     {
         $usuarios = User::with('pessoas')->paginate(10);
-
-
         return view('dashboard.users' , compact('usuarios'));
         // return response()->json(["response" => "Hello Word"] , 200 );
     }
@@ -88,9 +86,9 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-
-         // Tente encontrar o usuário pelo ID
     $user = User::find($id);
+
+    $request["password"] = bcrypt($request['password']);
 
     // Verifique se o usuário foi encontrado
     if (! $user) {
@@ -100,7 +98,17 @@ class UserController extends Controller
     // Atualize o usuário com os dados da requisição
     $user->update($request->all());
 
-    return response()->json(["response" => "Usuário editado com sucesso"], 200);
+    $update_pessoa = [
+        "nome" => $request['nome'] ,
+        "cpf" => $request['cpf'] ,
+        "rg" => $request['rg'] ,
+        "cnpj" => $request['cnpj'] ,
+        "dt_nascimento" => $request['dt_nascimento'] ,
+    ];
+    $pessoa = Pessoas::where("user_id" , $user['id']);
+    $pessoa->update($update_pessoa);
+
+    return redirect()->back()->with('success', 'Usuário editado com sucesso!');
     }
 
     /**

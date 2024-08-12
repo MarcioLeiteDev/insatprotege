@@ -49,11 +49,15 @@
           <div class="row">
 
             <h3>Login</h3>
-            <div class="col-6">
+            <div class="col-4">
+              <label for="nickname">Apelido</label>
+              <input type="text" name="nickname" id="nickname" class="form-control">
+            </div>
+            <div class="col-4">
               <label for="email">E-mail</label>
               <input type="text" name="email" id="email" class="form-control">
             </div>
-            <div class="col-6">
+            <div class="col-4">
               <label for="password">Senha</label>
               <input type="password" name="password" id="password" class="form-control">
             </div>
@@ -155,13 +159,17 @@
                   <div class="row">
         
                     <h3>Login</h3>
-                    <div class="col-6">
+                    <div class="col-4">
+                      <label for="nickname">Apelido</label>
+                      <input type="text" name="nickname" id="nickname" value="{{ $item['nickname'] }}" class="form-control">
+                    </div>
+                    <div class="col-4">
                       <label for="email">E-mail</label>
                       <input type="text" name="email" id="email" value="{{ $item['email'] }}" class="form-control">
                     </div>
-                    <div class="col-6">
+                    <div class="col-4">
                       <label for="password">Senha</label>
-                      <input type="password" name="password" id="password" value="{{ $item['password'] }}" class="form-control">
+                      <input type="password" name="password" id="password"  class="form-control">
                     </div>
                     <h3>Dados Pessoais</h3>
                     <div class="col-12">
@@ -170,29 +178,30 @@
                     </div>
                     <div class="col-6">
                       <label for="rg">RG</label>
-                      <input type="text" name="rg" id="rg" class="form-control">
+                      <input type="text" name="rg" id="rg" value="{{ $item['pessoas']['rg'] }}" class="form-control">
                     </div>
                     <div class="col-6">
                       <label for="cpf">CPF</label>
-                      <input type="text" name="cpf" id="cpf" class="form-control">
+                      <input type="text" name="cpf" id="cpf" value="{{ $item['pessoas']['cpf'] }}" class="form-control">
                     </div>
                     <div class="col-6">
                       <label for="cnpj">CNPJ</label>
-                      <input type="text" name="cnpj" id="cnpj" class="form-control">
+                      <input type="text" name="cnpj" id="cnpj" value="{{ $item['pessoas']['cnpj'] }}" class="form-control">
                     </div>
                     <div class="col-6">
                       <label for="dt_nascimento">Data Nascimento</label>
-                      <input type="date" name="dt_nascimento" id="dt_nascimento" class="form-control">
+                      <input type="date" name="dt_nascimento" id="dt_nascimento" value="{{ $item['pessoas']['dt_nascimentos'] }}" class="form-control">
                     </div>
         
                     <h3>Nível de Usuário</h3>
                     <select name="level" id="level" class="form-control">
+                      <option value="{{ $item['level'] }}">{{ $item['level'] }}</option>
                       <option value="1">Administrador</option>
                       <option value="2">Representante</option>
                     </select>
                   </br>
                     <div class="col-12">
-                      <input type="submit" value="Cadastrar" class="btn btn-success">
+                      <input type="submit" value="Editar" class="btn btn-success">
                     </div>
                     
                   </div>

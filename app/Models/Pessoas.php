@@ -14,6 +14,7 @@ class Pessoas extends Model
         'nome',
         'rg',
         'cpf',
+        'cnpj',
         'dt_nascimento',
         'user_id',
     ];
