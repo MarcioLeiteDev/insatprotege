@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pessoas;
 use App\Models\Telefones;
 use Illuminate\Http\Request;
 
@@ -10,9 +11,12 @@ class TelefoneController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($id)
     {
-       return response()->json(["response" => "Telefones"] , 200);
+        $pessoa = Pessoas::findOrFail($id);
+        $telefones = Telefones::where('id_pessoa' , $id)->get();
+        return view('dashboard.telefones' , compact('id' , 'pessoa' , 'telefones'));
+    //    return response()->json(["response" => "Telefones"] , 200);
     }
 
     /**
@@ -26,15 +30,15 @@ class TelefoneController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request , $id )
     {
         $telefone = Telefones::create($request->all());
 
         if(! $telefone){
             return response()->json(["response" => "Não foi possivel cadastrar telefones"], 404);
         }
-        return response()->json(["response" => "Telefone cadastrado com Sucesso"], 404);
-    //    dd($request->all());
+        return redirect()->route('escritorio.telefones.index' , [$id] )->with('success', 'Telefone cadastrado com sucesso!');
+
     }
 
     /**

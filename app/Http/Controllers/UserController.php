@@ -58,6 +58,38 @@ class UserController extends Controller
 
         return redirect()->back()->with('success', 'Usuário cadastrado com sucesso!');
     }
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function storeCliente(Request $request)
+    {
+
+        $request["password"] = bcrypt($request['password']);
+
+        $create_usuario = [
+            "email" => $request['email'],
+            "password" =>  $request["password"],
+            "level" => $request['level']
+        ];
+       
+        $users = User::create($create_usuario);
+      
+        $create_pessoa = [
+            "nome" => $request['nome'],
+            "cpf" => $request['cpf'] ?? '',
+            "cnpj" => $request['cnpj'] ?? '',
+            "dt_nascimento" => $request['dt_nascimento'] ?? '',
+            "user_id" => $users->id,
+        ];
+
+        $pessoa = Pessoas::create($create_pessoa);
+
+        if( ! $users ){
+            return redirect()->back()->with('danger', 'Erro cadastrar usuario');
+        }
+
+        return redirect()->route('escritorio.enderecos.index' , [$pessoa->id] )->with('success', 'Usuário cadastrado com sucesso!');
+    }
 
     /**
      * Display the specified resource.

@@ -12,7 +12,7 @@ class PessoasController extends Controller
      */
     public function index()
     {
-        return response()->json(["response" => "Pessoas"] , 200);
+        return view('dashboard.clientes');
     }
 
     /**

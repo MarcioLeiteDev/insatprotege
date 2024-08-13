@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Enderecos;
+use App\Models\Pessoas;
 use Illuminate\Http\Request;
 
 class EnderecoController extends Controller
@@ -10,9 +11,11 @@ class EnderecoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(string $id)
     {
-        return response()->json(["response" => "Endereços"] , 200);
+        $pessoa = Pessoas::findOrFail($id);
+        $endereco = Enderecos::where("id_pessoa" , $pessoa->id)->get();
+        return view('dashboard.enderecos' , compact('id' , 'pessoa' , 'endereco'));
     }
 
     /**
@@ -26,7 +29,7 @@ class EnderecoController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request , $id)
     {
         $endereco = Enderecos::create($request->all());
 
@@ -34,7 +37,7 @@ class EnderecoController extends Controller
             return response()->json(["response" => "Nãso foi possivel cadastrar esse endereço"] , 404);
         }
 
-        return response()->json(["response" => "Endreço cadastrado com Sucesso"] , 404);
+        return redirect()->route('escritorio.enderecos.index' , [$id] )->with('success', 'Endereço cadastrado com sucesso!');
     }
 
     /**

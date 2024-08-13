@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('bairro')->nullable();
             $table->string('cidade')->nullable();
             $table->string('uf')->nullable();
+            $table->string('tipo')->nullable()->comment('residencial , empresarial');
             $table->timestamps();
             $table->softDeletes();
         });

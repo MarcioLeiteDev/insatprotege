@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
+  <head>
+    <script src="{{ asset('assets/js/color-modes.js') }}"></script>
+    {{-- <script src="../assets/js/color-modes.js"></script> --}}
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -171,7 +173,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="{{ route('escritorio.clientes.index') }}">
                 <svg class="bi"><use xlink:href="#cart"/></svg>
                 Clientes
               </a>
@@ -223,7 +225,8 @@
 
   </div>
 </div>
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ asset('assets/dist/js/bootstrap.bundle.min.js') }}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="dashboard.js"></script></body>
 </html>

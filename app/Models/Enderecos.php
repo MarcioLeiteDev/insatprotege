@@ -19,6 +19,7 @@ class Enderecos extends Model
         'cidade',
         'uf',
         'cep',
+        'tipo',
     ];
 
     public function pessoas(){
