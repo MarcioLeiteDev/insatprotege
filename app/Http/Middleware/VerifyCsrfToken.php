@@ -34,5 +34,7 @@ class VerifyCsrfToken extends Middleware
         '/escritorio/veiculos/delete/*',
         '/escritorio/fipe/marca',
         '/escritorio/fipe/modelo',
+        '/escritorio/fipe/ano',
+        '/escritorio/fipe/valor',
     ];
 }

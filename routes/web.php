@@ -77,6 +77,8 @@ Route::controller(DashboardController::class)->prefix('/escritorio')->as('escrit
     Route::controller(FipeController::class)->prefix('/fipe')->as('fipe.')->group(function(){
         Route::post('/marca' , 'marca')->name('marca');
         Route::post('/modelo' , 'modelo')->name('modelo');
+        Route::post('/ano' , 'ano')->name('ano');
+       
     });
 
 });
