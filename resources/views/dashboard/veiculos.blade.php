@@ -83,9 +83,32 @@
                         </div>
 
                         <div class="form-group col-md-3">
-                            <label>Renavam</label>
-                            <input type="text" name="renavam" class="form-control" />
-
+                            <label>Plano</label>
+                            <select name="plano" id="plano" class="form-control">
+                                @foreach ($planos as $plano )
+                                <option value="{{ $plano['id'] }}"> {{ $plano['plano'] }} </option> 
+                                @endforeach
+                                
+                            </select>
+                           
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Assistencia 24 Horas</label>
+                            <select name="assist_24hs" id="assist_24hs" class="form-control">
+                                <option value="0"> Não</option>
+                                <option value="1"> Sim</option>
+                                
+                            </select>
+                           
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Central</label>
+                            <select name="central" id="central" class="form-control">
+                                <option value="0"> Não</option>
+                                <option value="1"> Sim</option>
+                                
+                            </select>
+                           
                         </div>
                 </form>
 

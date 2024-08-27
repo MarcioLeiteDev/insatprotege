@@ -173,6 +173,12 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="{{ route('escritorio.planos.index') }}">
+                <svg class="bi"><use xlink:href="#file-eye"/></svg>
+                Planos
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="{{ route('escritorio.clientes.index') }}">
                 <svg class="bi"><use xlink:href="#cart"/></svg>
                 Clientes
@@ -194,6 +200,12 @@
               <a class="nav-link d-flex align-items-center gap-2" href="#">
                 <svg class="bi"><use xlink:href="#puzzle"/></svg>
                 Comissões
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="{{ route('escritorio.export.import') }}">
+                <svg class="bi"><use xlink:href="#puzzle"/></svg>
+                Importar Excel
               </a>
             </li>
           </ul>

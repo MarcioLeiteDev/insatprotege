@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Planos;
 
 return new class extends Migration
 {
@@ -19,6 +20,14 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+        $dados = [
+            ["plano" => "Plano 12" , "valor" => 79 , "prazo" => 12],
+            ["plano" => "Plano 24" , "valor" => 69 , "prazo" => 24],
+            ["plano" => "Plano 36" , "valor" => 59 , "prazo" => 36],
+            ["plano" => "Zero" , "valor" => 0 , "prazo" => 0],
+        ];
+
+        Planos::insert($dados);
     }
 
     /**

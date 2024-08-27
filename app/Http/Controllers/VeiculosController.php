@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Planos;
 use App\Models\Veiculos;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class VeiculosController extends Controller
      */
     public function index($id)
     {
-        return view('dashboard.veiculos');
+        $planos = Planos::all();
+        return view('dashboard.veiculos' , compact('planos'));
         // return response()->json(["response" => "veiculos"], 200);
     }
 

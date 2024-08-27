@@ -20,22 +20,18 @@ return new class extends Migration
             $table->string('cor')->nullable();
             $table->string('placa')->nullable();
             $table->string('chassi')->nullable();
-            $table->string('renavam')->nullable();
-            $table->string('equipamento')->nullable();
+            $table->string('plano')->nullable();
+            $table->float('valor' , 10,2)->nullable();
+
             $table->date('dt_instalacao')->nullable();
             $table->boolean('central')->default(0);
             $table->boolean('assist_24hs')->default(0);
-            $table->longText('Observacoes')->nullable();
-            $table->string('equipamento_numero')->nullable();
-            $table->string('chip')->nullable();
-            $table->string('login')->nullable();
-            $table->string('senha')->nullable();
-            $table->integer('vigencia')->nullable();
-            $table->float('valor')->nullable();
-            $table->boolean('status')->default(1)->comment('1 ativo 0 inativo');
+
+            $table->boolean('status')->default(0)->comment('1 ativo 0 inativo');
             $table->date('inicio')->nullable();
             $table->unsignedBigInteger('vendedor')->nullable();
-            $table->string('contrato')->nullable();
+            $table->string('nomeVendedor')->nullable();
+
             $table->timestamps();
             $table->softDeletes();
 

@@ -14,8 +14,16 @@ return new class extends Migration
         Schema::create('observacaos', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_veiculo')->constrained('veiculos');
-            $table->string('tipo_observacao')->nullable();
-            $table->longText('observacao')->nullable();
+            $table->string('equipamento')->nullable();
+
+            $table->longText('Observacoes')->nullable();
+            $table->string('equipamento_numero')->nullable();
+            $table->string('chip')->nullable();
+            $table->string('login')->nullable();
+            $table->string('senha')->nullable();
+            // $table->integer('vigencia')->nullable();
+            // $table->float('valor')->nullable();
+            $table->string('contrato')->nullable();
             $table->timestamps();
         });
     }

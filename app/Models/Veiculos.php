@@ -34,6 +34,9 @@ class Veiculos extends Model
         "inicio",
         "vendedor",
         "contrato",
+        "valor",
+        'nomeVendedor',
+        'vendedor',
     ];
 
 

@@ -9,4 +9,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Planos extends Model
 {
     use HasFactory, SoftDeletes;
+
+    protected $fillable = [
+        'plano',
+        'prazo',
+        'valor'
+    ];
 }
