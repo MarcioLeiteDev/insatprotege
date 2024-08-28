@@ -31,10 +31,10 @@ class VeiculosController extends Controller
      */
     public function store(Request $request)
     {
-        $dt_inst_exp = explode("/" , $request['dt_instalacao']);
-        $dt_inst = $dt_inst_exp[2] . "-" . $dt_inst_exp[1] . "-" . $dt_inst_exp[0];
+        // $dt_inst_exp = explode("/" , $request['dt_instalacao']);
+        // $dt_inst = $dt_inst_exp[2] . "-" . $dt_inst_exp[1] . "-" . $dt_inst_exp[0];
 
-        $request["dt_instalacao"] = $dt_inst;
+        // $request["dt_instalacao"] = $dt_inst;
         $veiculos = Veiculos::create($request->all());
 
         if( ! $veiculos ){

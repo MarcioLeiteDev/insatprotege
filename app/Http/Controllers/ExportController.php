@@ -83,7 +83,7 @@ class ExportController extends Controller
             }
         }
 
-        $import = Pessoas::upsert($arrayPessoas, ['user_id'], ['nome', 'cpf', 'cnpj', 'dt_nascimento']);
+        $import = Pessoas::upsert($arrayPessoas, ['nome'], ['user_id', 'cpf', 'cnpj' ]);
 
         if ($import) {
             // Armazena dados na sessão
@@ -127,7 +127,7 @@ class ExportController extends Controller
             }
         }
 
-        $import = Enderecos::upsert($arrayEnderecos, ['id_pessoa'], ['logradouro', 'numero', 'complemento', 'cep', 'bairro', 'cidade', 'uf', 'tipo']);
+        $import = Enderecos::upsert($arrayEnderecos, ['logradouro'], ['id_pessoa', 'numero', 'complemento', 'cep', 'bairro', 'cidade', 'uf', 'tipo']);
 
         if ($import) {
             // Armazena dados na sessão
@@ -169,7 +169,7 @@ class ExportController extends Controller
             }
         }
 
-        $import = Telefones::upsert($arrayTelefones, ['id_pessoa'], ['numero', 'tipo']);
+        $import = Telefones::upsert($arrayTelefones, ['numero'], ['id_pessoa', 'tipo']);
 
 
 
@@ -184,97 +184,87 @@ class ExportController extends Controller
         return redirect()->back()->withErrors('Erro ao importar dados.');
     }
 
-
     public function veiculos(Request $request)
     {
-        ini_set('max_execution_time', 900);
-        // Obtém os dados da sessão
+        ini_set('max_execution_time', 900); // Aumenta o tempo de execução
         $dados = session('dados', []);
-
-        // dd($dados);
-        // Arrays para armazenar os dados
+    
         $arrayVeiculos = [];
         unset($dados[0]);
-        foreach($dados as $value)
-        {
-            
-            $pessoa_id = Pessoas::select('id')->where('nome', $value[1])->first();
-
+    
+        foreach ($dados as $value) {
+            $pessoa = Pessoas::select('id')->where('nome', $value[1])->first();
+            $pessoa_id = $pessoa ? $pessoa->id : null;
+    
             $valor = $value[26];
-
-            if($valor === "."){
+            if ($valor === "." || $valor === "" || !is_numeric($valor)) {
                 $valor = 0;
-            }else{
-                $valor = $valor;
+            } else {
+                $valor = number_format((float)$valor, 2, '.', ''); // Formata o valor como decimal com 2 casas decimais
             }
-
+    
             $vigencia = $value[34];
-
-            $plano = '';
-
-            if($vigencia === 12){
-                $plano = 1;
-            }
-            if($vigencia === 24){
-                $plano = 2;
-            }
-            if($vigencia === 36){
-                $plano = 3;
-            }
-            if($vigencia === 0){
-                $plano = 4;
-            }
-
-            $excelDate = intval($value[32]); // Data no formato Excel
+            $plano = match($vigencia) {
+                12 => 1,
+                24 => 2,
+                36 => 3,
+                0 => 4,
+                default => ''
+            };
+    
+            $excelDate = intval($value[32]);
             $dateTime = Date::excelToDateTimeObject($excelDate);
-            $formattedDate = $dateTime->format('Y-m-d'); // Formato de data do BD (YYYY-MM-DD)
-
-            $central = 0;
-            if($value[21] !== "NÃO"){
-                $central = 1;
+            $formattedDate = $dateTime->format('Y-m-d');
+    
+            $central = ($value[21] !== "NÃO") ? 1 : 0;
+            $assist = ($value[22] !== "NÃO") ? 1 : 0;
+            $status = ($value[22] !== "NÃO") ? 1 : 0;
+    
+            if ($pessoa_id !== null) {
+                $arrayVeiculos[] = [
+                    "id_pessoa" => $pessoa_id,
+                    "modelo" => $value[17] ?? '',
+                    "marca" => $value[16] ?? '',
+                    "ano" => $value[15] ?? '',
+                    "cor" => $value[14] ?? '',
+                    "placa" => $value[13] ?? '',
+                    "chassi" => 'no' ?? '',
+                    "plano" => $plano ?? '',
+                    "valor" => $valor ?? '',
+                    "dt_instalacao" => $formattedDate ?? '',
+                    "central" => $central ?? '',
+                    "assist_24hs" => $assist ?? '',
+                    "status" => $status ?? '',
+                    "inicio" => $formattedDate ?? '',
+                    "nomeVendedor" => $value[35] ?? '',
+                ];
             }
-
-            $assist = 0;
-            if($value[22] !== "NÃO"){
-                $assist = 1;
-            }
-
-            $status = 0;
-            if($value[22] !== "NÃO"){
-                $status = 1;
-            }
-
-            $arrayVeiculos[] = [
-                "id_pessoa" => $pessoa_id->id ?? '',
-                "modelo" => $value[17] ?? '',
-                "marca" => $value[16] ?? '',
-                "ano" => $value[15] ?? '',
-                "cor" => $value[14] ?? '',
-                "placa" => $value[13] ?? '',
-                "chassi" => 'no' ?? '',
-                "plano" => $plano ?? '',
-                "valor" => $valor ?? '',
-                "dt_instalacao" => $formattedDate ?? '',
-                "central" => $central ?? '',
-                "assist_24hs" => $assist ?? '',
-                "status" => $status ?? '',
-                "inicio" => $formattedDate ?? '',
-
-                "nomeVendedor" => $value[35] ?? '',
-            ];
         }
-        // dd($arrayVeiculos);
-
-        $import = Veiculos::upsert($arrayVeiculos, ['placa'], ['modelo', 'marca' , 'ano' , 'cor' , 'plano' , 'valor' , 'dt_instalacao' , 'central']);
-
-
-
-        if ($import) {
-            // Armazena dados na sessão
-            session()->flash('dados', $dados);
-
-            // Redireciona para a nova rota
-            return redirect()->route('escritorio.export.index');
+    
+        $chunks = array_chunk($arrayVeiculos, 100);
+    
+        foreach ($chunks as $chunk) {
+            Veiculos::upsert($chunk, ['placa'], [
+                'id_pessoa',
+                'modelo',
+                'marca',
+                'ano',
+                'cor',
+                'plano',
+                'valor',
+                'dt_instalacao',
+                'central',
+                'assist_24hs',
+                'status',
+                'inicio',
+                'nomeVendedor',
+            ]);
         }
+    
+        session()->flash('dados', $dados);
+        return redirect()->route('escritorio.export.index');
     }
+    
+    
+   
 }
