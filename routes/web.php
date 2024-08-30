@@ -42,6 +42,7 @@ Route::controller(DashboardController::class)->prefix('/escritorio')->as('escrit
         Route::get('/enderecos' , 'enderecos')->name('enderecos');
         Route::get('/telefones' , 'telefones')->name('telefones');
         Route::get('/veiculos' , 'veiculos')->name('veiculos');
+        Route::get('/obs' , 'obs')->name('obs');
     });
 
     Route::controller(UserController::class)->prefix('/users')->as('users.')->group(function(){

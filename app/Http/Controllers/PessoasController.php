@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pessoas;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PessoasController extends Controller
@@ -12,7 +13,10 @@ class PessoasController extends Controller
      */
     public function index()
     {
-        return view('dashboard.clientes');
+        $clientes = User::with('pessoas')->paginate(10);
+
+        // return response()->json($clientes);
+        return view('dashboard.clientes' , compact('clientes'));
     }
 
     /**

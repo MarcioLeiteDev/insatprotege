@@ -2,18 +2,16 @@
 <html lang="en" data-bs-theme="auto">
   <head>
     <script src="{{ asset('assets/js/color-modes.js') }}"></script>
-    {{-- <script src="../assets/js/color-modes.js"></script> --}}
+  
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.122.0">
-    <title>Dashboard Template · Bootstrap v5.3</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
+    <title>Escritorio Virtual</title>
 
-    
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
@@ -184,7 +182,7 @@
                 Clientes
               </a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
                 <svg class="bi"><use xlink:href="#people"/></svg>
                 Cobranças
@@ -201,9 +199,9 @@
                 <svg class="bi"><use xlink:href="#puzzle"/></svg>
                 Comissões
               </a>
-            </li>
+            </li> --}}
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="{{ route('escritorio.export.import') }}">
+              <a class="nav-link d-flex align-items-center gap-2" href="{{ route('escritorio.export.index') }}">
                 <svg class="bi"><use xlink:href="#puzzle"/></svg>
                 Importar Excel
               </a>
@@ -240,5 +238,6 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="{{ asset('assets/dist/js/bootstrap.bundle.min.js') }}"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="dashboard.js"></script></body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/dashboard.js') }}"></script></body>
 </html>

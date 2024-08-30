@@ -3,7 +3,12 @@
   width: 1rem;
   height: 1rem;
 }
-
+.relative{
+  display:flex;
+  justify-content: space-between;
+  font-size:.8em;
+  width: 40%;
+}
 /*
  * Sidebar
  */

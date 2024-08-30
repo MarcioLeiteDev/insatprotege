@@ -13,9 +13,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        $usuarios = User::with('pessoas')->paginate(10);
+        $usuarios = User::with('pessoas')->where('level', '!=', 3)->paginate(10);
+
+        // dd($usuarios);
         return view('dashboard.users' , compact('usuarios'));
-        // return response()->json(["response" => "Hello Word"] , 200 );
+        
     }
 
     /**

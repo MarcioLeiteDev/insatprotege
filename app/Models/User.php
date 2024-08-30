@@ -65,6 +65,6 @@ class User extends Authenticatable
 
     public function pessoas()
     {
-        return $this->hasOne(Pessoas::class, 'user_id', 'id');
+        return $this->hasOne(Pessoas::class, 'user_id', 'id')->with('enderecos' , 'telefones' , 'veiculos');
     }
 }

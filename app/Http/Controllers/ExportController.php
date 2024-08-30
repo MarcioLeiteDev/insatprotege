@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Imports\ExcelDataImport;
 use App\Models\Enderecos;
+use App\Models\Observacao;
 use App\Models\Pessoas;
 use App\Models\Telefones;
 use App\Models\User;
@@ -63,6 +64,8 @@ class ExportController extends Controller
         ini_set('max_execution_time', 300);
         // Obtém os dados da sessão
         $dados = session('dados', []);
+
+        // dd($dados);
 
         // Arrays para armazenar os dados
         $arrayPessoas = [];
@@ -244,7 +247,7 @@ class ExportController extends Controller
         $chunks = array_chunk($arrayVeiculos, 100);
     
         foreach ($chunks as $chunk) {
-            Veiculos::upsert($chunk, ['placa'], [
+          $import =  Veiculos::upsert($chunk, ['placa'], [
                 'id_pessoa',
                 'modelo',
                 'marca',
@@ -260,9 +263,69 @@ class ExportController extends Controller
                 'nomeVendedor',
             ]);
         }
+
+        if ($import) {
+            // Armazena dados na sessão
+            session()->flash('dados', $dados);
+
+            // Redireciona para a nova rota
+            return redirect()->route('escritorio.export.obs');
+        }
+
+    
+        // session()->flash('dados', $dados);
+        // return redirect()->route('escritorio.export.index')->with('success', 'Importação realizada com Sucesso!');
+    }
+
+    public function obs(Request $request)
+    {
+        ini_set('max_execution_time', 900); // Aumenta o tempo de execução
+        $dados = session('dados', []);
+
+        // dd($dados);
+    
+        $arrayVeiculos = [];
+        unset($dados[0]);
+    
+        foreach ($dados as $value) {
+            $veiculo = Veiculos::select('id')->where('placa', $value[13])->first();
+            $veiculo_id = $veiculo ? $veiculo->id : null;
+
+    
+            $excelDate = intval($value[32]);
+            $dateTime = Date::excelToDateTimeObject($excelDate);
+            $formattedDate = $dateTime->format('Y-m-d');
+
+    
+            if ($veiculo_id !== null) {
+                $arrayObs[] = [
+                    "id_veiculo" => $veiculo_id,
+                    "equipamento" => $value[24] ?? '',
+                    "Observacoes" => $value[36] ?? '',
+                    "chip" => $value[25] ?? '',
+                    "login" => $value[29] ?? '',
+                    "senha" => $value[30] ?? '',
+                    "contrato" => $value[2]  ?? '',
+                    
+                ];
+            }
+        }
+    
+        $chunks = array_chunk($arrayObs, 100);
+    
+        foreach ($chunks as $chunk) {
+           Observacao::upsert($chunk, ['equipamento'], [
+                'Observacoes',
+                'chip',
+                'login',
+                'senha',
+                'contrato',
+            ]);
+        }
+
     
         session()->flash('dados', $dados);
-        return redirect()->route('escritorio.export.index');
+        return redirect()->route('escritorio.export.index')->with('success', 'Importação realizada com Sucesso!');
     }
     
     

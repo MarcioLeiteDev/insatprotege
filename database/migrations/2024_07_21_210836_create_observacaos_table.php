@@ -21,8 +21,6 @@ return new class extends Migration
             $table->string('chip')->nullable();
             $table->string('login')->nullable();
             $table->string('senha')->nullable();
-            // $table->integer('vigencia')->nullable();
-            // $table->float('valor')->nullable();
             $table->string('contrato')->nullable();
             $table->timestamps();
         });

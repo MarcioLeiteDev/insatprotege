@@ -100,20 +100,124 @@
 
     <table class="table">
       <thead >
-        <tr class="bg bg-success">
+        <tr class="bg bg-dark">
           <th>Nome</th>
           <th>E-mail</th>
           <th>Telefone</th>
+          <th>Endereços</th>
           <th>Veiculos</th>
           <th>Editar</th>
           <th>Deletar</th>
         </tr>
       </thead>
+      <tbody>
+        <tr>
+          @foreach ($clientes as $key => $value )
+              
+      
+          <td>{{ $value['pessoas']['nome'] }}</td>
+          <td>{{ $value['email'] }}</td>
+          <td>
+            <div class="accordion" id="accordionExample{{ $key }}">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{ $key }}" aria-expanded="true" aria-controls="collapseOne{{ $key }}">
+                    Telefone 
+                  </button>
+                </h2>
+                <div id="collapseOne{{ $key }}" class="accordion-collapse collapse" data-bs-parent="#accordionExample{{ $key }}">
+                  <div class="accordion-body">
+                    @foreach ($value['pessoas']['telefones'] as $telefone)
+                    {{ $telefone['numero'] }}<br>
+                    @endforeach
+                  </div>
+                </div>
+              </div>
+            
+      </td>
+          <td>
+
+            <div class="accordion" id="accordionExampleEnd{{ $key }}">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneEnd{{ $key }}" aria-expanded="true" aria-controls="collapseOneEnd{{ $key }}">
+                    Endereços
+                  </button>
+                </h2>
+                <div id="collapseOneEnd{{ $key }}" class="accordion-collapse collapse" data-bs-parent="#accordionExampleEnd{{ $key }}">
+                  <div class="accordion-body">
+                    @foreach ($value['pessoas']['enderecos'] as $endereco)
+              {{  $endereco['logradouro'] }}, nº {{  $endereco['numero'] }},
+              complemento {{ $endereco['complemento'] }} , Cidade {{ $endereco['cidade'] }} , UF: {{ $endereco['uf'] }}
+            @endforeach
+                  </div>
+                </div>
+              </div>
+
+
+
+           
+          </td>
+          <td>
+
+
+            <div class="accordion" id="accordionExampleVeiculo{{ $key }}">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneVeiculo{{ $key }}" aria-expanded="true" aria-controls="collapseOneVeiculo{{ $key }}">
+                    Veiculos
+                  </button>
+                </h2>
+                <div id="collapseOneVeiculo{{ $key }}" class="accordion-collapse collapse" data-bs-parent="#accordionExampleVeiculo{{ $key }}">
+                  <div class="accordion-body">
+                   
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Veiculo</th>
+                          <th>Modelo</th>
+                          <th>Placa</th>
+                          <th>Plano</th>
+                          <th>Valor</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @foreach ($value['pessoas']['veiculos'] as $veiculo)
+                        <tr>
+                          <td>{{ $veiculo['marca'] }}</td>
+                          <td>{{ $veiculo['modelo'] }}</td>
+                          <td>{{ $veiculo['placa'] }}</td>
+                          <td>{{ $veiculo['plano'] }}</td>
+                          <td>{{ $veiculo['valor'] }}</td>
+                        </tr>
+                        @endforeach
+                      </tbody>
+                    </table>
+                    
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+          </td>
+          <td>Editar</td>
+          <td>Deletar</td>
+        </tr>
+        @endforeach
+      </tbody>
 
     </table>
+
+    <div class="py-4">  {{ $clientes }} </div>
  
+   
 
 
   </main>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
   @endsection()
